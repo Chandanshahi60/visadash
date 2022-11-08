@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Visa</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/> -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+  <!-- <link rel="stylesheet" href="vendors/feather/feather.css" /> -->
+  <!-- <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css" /> -->
+  <!-- <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css" /> -->
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <!-- <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css" /> -->
+  <!-- <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css" /> -->
+  <!-- <link rel="stylesheet" type="text/css" href="js/select.dataTables.min.css" /> -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/vertical-layout-light/style.css" />
+  <!-- endinject -->
+  <!-- <link rel="shortcut icon" href="images/favicon.png" /> -->
+</head>
+
+<body>
+  <style>
+    .main-panel {
+      width: calc(100% - -8px) !important;
+    }
+  </style>
+  <style>
+    .fa{ 
+      top: 17%;
+    margin-left: 238px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0rem;
+    height: 1rem;
+    font-size: 2rem;
+    color: #5603f0;
+    border: 1px solid #5603f0;
+    border-radius: 50%;
+    padding: 24px;
+    width: 14%;
+    background: white;
+   
+}
+
+i.fa.fa-info.anoun {
+    margin-left: 175px !important;
+}
+
+i.fa.fa-wifi.wi {
+    margin-left: 225px !important;
+    top: 33px !important;
+    color: #8e5fef;
+}
+i.fa.fa-info {
+  top: 3% !important;
+    margin-left: 137px !important;
+    color: black !important;
+    border-color: black !important;
+    font-size: 17px !important;
+    height: -2px !important;
+    padding: 8px !important;
+    width: 8px !important;
+}
+i.fa.fa-users {
+    color: #1f91cd;
+    border: 1px solid #1f91cd;
+    top: 13%;
+}
+i.fa.fa-search {
+    color: #02f179;
+    border: 1px solid #02f179;
+}
+i.fa.fa-tasks {
+    color: #fab66b;
+    border: 1px solid #fab66b;
+    top: 15%;
+}
+i.fa.fa-newspaper-o {
+    color: #fab66b;
+    top: 32px;
+    border: 1px solid #fab66b;
+}
+b {
+    color: #1f91cd;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 73px;
+  height: 21px;
+}
+
+.switch input {opacity: 0;
+  width: 0;
+  height: 0;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fab66b;
+  -webkit-transition: .4s;
+  transition: .4s;
+   border-radius: 0px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 0%;
+}
+
+input:checked + .slider {
+  background-color: #2ab934;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(55px);
+}
+
+/*------ ADDED CSS ---------*/
+.slider:after
+{
+ content:'OFF';
+ color: white;
+ display: block;
+ position: absolute;
+ transform: translate(-50%,-50%);
+ top: 50%;
+ left: 50%;
+ font-size: 10px;
+ font-family: Verdana, sans-serif;
+}
+
+input:checked + .slider:after
+{  
+  content:'ON';
+}
+
+pre {
+    
+    padding: 15px;
+    margin-top: -11px;
+    font-size: 14px;
+    margin-left: -24px;
+    padding-top: 0px;
+    background-color: white;
+}
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: rgb(217, 221, 22);
+  border-radius: 50%;
+  display: inline-block;
+}
+.icon-data-list li img {
+    width: 80px;
+    height: 50px;
+    margin-right: 20px;
+    border-radius: 0px;
+}
+pre.cli {
+    float: right;
+}
+
+  
+  </style>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_settings-panel.html -->
+
+
+      <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
+
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-md-12 grid-margin">
+              <div class="row">
+                <div class="col-12 col-xl-12">
+                  <div class="justify-content-end d-flex">
+                    <div class="dropdown flex-md-grow-1 flex-xl-grow-0"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row"></div>
+          <div class="row"></div>
+          <div class="row"></div>
+          <div class="row"></div>
+          <div class="row">
+            <div class="col-md-3 stretch-card grid-margin">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title mb-0">ANNOUNCEMENTS<i class="fa fa-newspaper-o" aria-hidden="true"></i></p><i class="fa fa-info anoun" aria-hidden="true"></i>
+                  <hr style="border-top: 2px solid rgb(250 182 107);">
+                  <div class="table-responsive">
+                  <p class="card-text"><b><pre>                   Mark As Read</pre></b></p>
+
+                    <!-- <div class="card-body">
+                      <span class="dot"><b>New conent On Officio studio!</b></span> 
+
+                    </div>      -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 grid-margin transparent">
+
+              <div class="row row-cols-1 row-cols-md-2">
+                <div class="col mb-4">
+                  <div class="card">
+                    <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                      <h5 class="card-title">CLIENTS<i class="fa fa-users" aria-hidden="true"></i></h5>
+                      <hr style="border-top: 2px solid rgb(31 145 205);">
+                      <pre class="cli mt-3">       Today</pre></p>
+                      <div class="mt-5">
+                      <p class="card-text"><b>0</b>   New Clints</p><p class="card-text">
+                      <p class="card-text"><b>0</b>  Clints have payment due</p>
+                        <p class="card-text"><b>0</b>  clints uploaded documents</p>
+                        <p class="card-text"><b>0</b>  Clints completed forms</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col mb-4">
+                  <div class="card">
+                    <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                      <h5 class="card-title">TASKS<i class="fa fa-tasks" aria-hidden="true"></i></h5>
+                      <hr style="border-top: 2px solid rgb(250 182 107);">
+                      <p class="card-text"><b>Email Daily Notification</b><label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                      </label></p>
+                        <div class="mt-4">
+                        <p class="card-text"><b>0</b>  Due as of Today</p>
+                        <p class="card-text"><b>0</b>  Due Tomorrow</p>
+                        <p class="card-text"><b>0</b>  Due Over the next 7 days</p>
+                        </div>
+
+
+                     
+                    </div>
+                  </div>
+                </div>
+                <div class="col mb-4">
+                  <div class="card">
+                    <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                      <h5 class="card-title">PROSPECT<i class="fa fa-search" aria-hidden="true"></i></h5>
+                      <hr style="border-top: 2px solid rgb(2, 241, 121);" >
+                      <div class="mt-4">
+                      <p class="card-text"><b>156</b>   Waiting for assement (unread)</p>
+                      <p class="card-text"><b>4</b>   Qualified prospects (unread)</p>
+                      <p class="card-text"><b>0</b>   Unqualified prospects (unread)</p>
+                      <p class="card-text"><b>160</b>   All new prospects </p>
+                    </div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col mb-4">
+                  <div class="card">
+                    <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                      <h5 class="card-title">CLIENT ACCOUNT</h5><i class="fa fa-database" aria-hidden="true"></i>
+                      <hr style="border-top: 2px solid rgb(86, 3, 240);" >
+                      <div class="mt-5">
+                      <p class="card-text"><b> TD Business Investor (US$)</b></p>
+                      <p class="card-text">  NOT  Reconciled </p>
+                      <p class="card-text">  1 Payment not assigned </p>
+                    </div>
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 stretch-card grid-margin">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title">RECENT NEWS <i class="fa fa-info" aria-hidden="true"></i></p><i class="fa fa-wifi wi" aria-hidden="true"></i>
+                  <hr style="border-top: 2px solid rgb(142 95 239);">
+                  <ul class="icon-data-list">
+                    <li>
+                      <div class="d-flex">
+                        <img src="images/faces/face1.jpg" alt="user" />
+                        <div>
+                          <!-- <p class="text-info mb-1">Isabella Becker</p> -->
+                          <p class="mb-0">A faster processing time for work permit applications:Global Skills Strategy</p>
+                         
+                          <small><b>Parsal immigration services</b></small>                            <small>16 hour ago</small>
+                          
+                        </div>
+                        
+                      </div>
+                      <hr>
+                    </li>
+                    <li>
+                      <div class="d-flex">
+                        <img src="images/faces/face2.jpg" alt="user" />
+                        <div>
+                          <p class="text-info mb-1">Adam Warren</p>
+                          <p class="mb-0">You have done a great job #TW111</p>
+                          <small>10:30 am</small>
+                        </div>
+                      </div>
+                      <hr>
+                    </li>
+                    <li>
+                      <div class="d-flex">
+                        <img src="images/faces/face3.jpg" alt="user" />
+                        <div>
+                          <p class="text-info mb-1">Leonard Thornton</p>
+                          <p class="mb-0">Sales dashboard have been created</p>
+                          <small>11:30 am</small>
+                        </div>
+                      </div>
+                      <hr>
+                    </li>
+                    <li>
+                      <div class="d-flex">
+                        <img src="images/faces/face4.jpg" alt="user" />
+                        <div>
+                          <p class="text-info mb-1">George Morrison</p>
+                          <p class="mb-0">Sales dashboard have been created</p>
+                          <small>8:50 am</small>
+                        </div>
+                      </div>
+                      <hr>
+                    </li>
+                    <li>
+                      <div class="d-flex">
+                        <img src="images/faces/face5.jpg" alt="user" />
+                        <div>
+                          <p class="text-info mb-1">Ryan Cortez</p>
+                          <p class="mb-0">Herbs are fun and easy to grow.</p>
+                          <small>9:00 am</small>
+                        </div>
+                      </div>
+                      <hr>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row"></div>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer"></footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="vendors/chart.js/Chart.min.js"></script>
+  <script src="vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+  <script src="js/dataTables.select.min.js"></script>
+
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="js/off-canvas.js"></script>
+  <script src="js/hoverable-collapse.js"></script>
+  <script src="js/template.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="js/dashboard.js"></script>
+  <script src="js/Chart.roundedBarCharts.js"></script>
+  <!-- End custom js for this page-->
+</body>
+
+</html>
